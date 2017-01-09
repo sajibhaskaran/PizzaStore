@@ -9,7 +9,8 @@ body{
   font-weight: 700;
 }
 
-h3{
+
+h1, h3{
   text-align: center;
   color: silver;
 }
@@ -18,7 +19,7 @@ h3{
 #outer_container {
   width: 80vw;
   height: 70vh;
-  margin: 15vh auto;
+  margin: 10vh auto;
 }
 .box{
   width: 23%;
@@ -52,20 +53,16 @@ p{
 #order, #total {
   width:70%;
   height:;
-//  background-color: blue;
   float:left;
 
 }
 #price, #total_price {
-  //padding-top:7px;
   width:29%;
   height:;
-  //background-color: gray;
   float:left;
   text-align: right;
 }
 #price p{
-  //padding: 4px;
   margin: 0;
 }
 

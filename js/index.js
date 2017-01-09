@@ -44,7 +44,7 @@ var getHTML = (total, price) =>{
   for(var key of Object.keys(total)){
   if(Array.isArray(total[key])){
     for(item in total[key]){
-
+// Creating teh elements and appending to the nodes.
       var itemnode = document.createElement("p");
       var textnode = document.createTextNode(total[key][item]);
           itemnode.appendChild(textnode);
