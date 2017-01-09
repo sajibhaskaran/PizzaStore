@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700);
+
+
+body{
+  background-image: url("../images/pizza.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Archivo Narrow;
+  font-weight: 700;
+}
+
+h3{
+  text-align: center;
+  color: silver;
+}
+
+
+#outer_container {
+  width: 80vw;
+  height: 70vh;
+  margin: 15vh auto;
+}
+.box{
+  width: 23%;
+  height: 100%;
+  float: left;
+  margin: auto;
+}
+.full_box{
+  width: 29%;
+  height: 106% ;
+  float: left;
+  margin-top: 10px;
+  background-color: #6679bf;
+  border-radius: 5px;
+  padding: 0 5px 0 5px;
+}
+.half_box{
+  width: 90%;
+  height: 50%;
+  margin: 10px;
+  background-color: #6679bf;
+  border-radius: 5px;
+  padding: 8px 4px 0 4px;
+}
+p{
+  padding: 1px;
+  margin: 0;
+
+}
+
+#order, #total {
+  width:70%;
+  height:;
+//  background-color: blue;
+  float:left;
+
+}
+#price, #total_price {
+  //padding-top:7px;
+  width:29%;
+  height:;
+  //background-color: gray;
+  float:left;
+  text-align: right;
+}
+#price p{
+  //padding: 4px;
+  margin: 0;
+}
+
+#total, #total_price{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: bold;
+
+}
