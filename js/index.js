@@ -1,3 +1,5 @@
+
+// Initializing the objects..
 var total = {
   'size': '',
   'crust': '',
@@ -14,27 +16,23 @@ var price = {
   'meat': [],
   'veggies': []
 };
-
+// Starting of getTotal function
 var getTotal = (price) => {
   var amount = 0;
   var totalPrice = document.querySelector('#total_price');
-  for(var key of Object.keys(price)){
-      if(Array.isArray(price[key])){
+  for(var key of Object.keys(price)){ // iterating through the Object.
+      if(Array.isArray(price[key])){// checking for arrays.
           for(item in price[key]){
               amount += parseInt(price[key][item]);
           }
-      }else if(!(price[key] == ''))amount += parseInt(price[key])
+      }else if(!(price[key] == '')) amount += parseInt(price[key])
 
   }
-
-
       totalPrice.innerHTML=amount + ".00";
-
- console.log(amount);
 
 }
 
-
+// Starting of getHTML function.
 var getHTML = (total, price) =>{
 
   var element1 = document.querySelector('#order');
@@ -75,17 +73,17 @@ var getHTML = (total, price) =>{
         pricenode.appendChild(textnode);
         element2.appendChild(pricenode);
       }
-  
+
   }
   }
-getTotal(price);
+getTotal(price); // Calling this function to calculate and display the total price.
 }
 
 
-
+// Starting of getValue function
 var getValue = (name, id) => {
   var classid;
-
+// checking the checkboxes and seperate them the radio inputs.
       if(name === 'meat'){
             total['meat']=[];
             price['meat']=[];
@@ -100,7 +98,7 @@ var getValue = (name, id) => {
 
   var list = document.querySelectorAll(classid);
   for (var item of list) {
-
+// filtering only the selected elements from the DOM tree.
     if(item.checked){
             if(name === 'meat' || name === 'veggies'){
               total[name].push(item.value)
@@ -113,8 +111,12 @@ var getValue = (name, id) => {
             }
     }
   }
-getHTML(total, price);
+getHTML(total, price); // Calling the function to populate the order.
 
 };
 
+/*
+ capturing the user selections and calling the function to filter and
+calculating the selections
+*/
 window.onclick= (e) => !(e.target.value === undefined) ? getValue(e.target.name, e.target.id): null;
